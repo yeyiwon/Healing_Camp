@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="<c:url value='/css/common.css'/> ">
     <link rel="stylesheet" href="<c:url value='/css/Camp_DetailPage.css'/> ">
     <link rel="stylesheet" href="<c:url value='/css/camp_review.css'/>">
-<%--    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3f0a7742d79160457c3522f1f048fbf4"></script>--%>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3f0a7742d79160457c3522f1f048fbf4"></script>
+<%-- 카카오 지도 api 키 있는 자리 --%>
+    
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 </head>
 <body>
