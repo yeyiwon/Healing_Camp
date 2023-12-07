@@ -3,13 +3,13 @@
 
 ---
 
- - [개요](#프로젝트-목적-)
-   - [인원](#프로젝트-인원)
-   - [기간](#프로젝트-기간)
- - [개발 환경 & 사용 기술](#팀-개발환경-및-사용-기술)
+ - [개요](#-프로젝트-목적-)
+   - [인원](#-프로젝트-인원)
+   - [기간](#-프로젝트-기간)
+ - [개발 환경 & 사용 기술](#-팀-개발환경-및-사용-기술)
    
- - [담당 역할🙌](#내가-맡은-파트-)
- - [페이지 소개 및 시연 영상](#페이지-소개-)
+ - [담당 역할🙌](#-내가-맡은-파트-)
+ - [페이지 소개 및 시연 영상](#-페이지-소개-)
 
 # ⛺프로젝트 목적 
 
@@ -43,21 +43,11 @@
 
 ---
 
-<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> 
-<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
-<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-<img src="https://img.shields.io/badge/Jquery-white?style=for-the-badge&logo=Jquery&logoColor=blue">
-
-<img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white">
-<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-<img src="https://img.shields.io/badge/-Java-344CB7?style=for-the-badge&logo=Java&logoColor=white"/>
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"><img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"><img src="https://img.shields.io/badge/Jquery-white?style=for-the-badge&logo=Jquery&logoColor=blue">
+<img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"><img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"><img src="https://img.shields.io/badge/-Java-344CB7?style=for-the-badge&logo=Java&logoColor=white"/>
 <img src="https://img.shields.io/badge/intelijidea-181717?style=for-the-badge&logo=intellijidea&logoColor=white">
 <img src="https://img.shields.io/badge/Visual_Studio_Code-white?style=for-the-badge&logo=visual%20studio%20code&logoColor=blue">
-
-<img src="https://img.shields.io/badge/Github-black?style=for-the-badge&logo=github&logoColor=purple">
-<img src="https://img.shields.io/badge/Spring-green?style=for-the-badge&logo=Spring&logoColor=white">
+<img src="https://img.shields.io/badge/Github-black?style=for-the-badge&logo=github&logoColor=purple"><img src="https://img.shields.io/badge/Spring-green?style=for-the-badge&logo=Spring&logoColor=white">
 
 ## 📝내가 맡은 파트
 
