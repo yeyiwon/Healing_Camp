@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.healingcamp.app.dao.storeIndexMapper.">
+    <!-- 베스트 아이템 고르기 -->
+    <select id="selectBestItem" parameterType="map" resultType="itemDto">
+        select T1.I_ID
+        ,T1.I_name
+        ,T1.I_company
+        ,T1.I_img_URL
+        ,T1.I_O_price
+        ,T1.I_S_Price
+        ,T1.I_reg_date
+        ,T1.I_count
+        ,T1.I_like_count
+        ,T1.I_R_count
+        ,T1.I_cate
+        ,T1.I_sell_cnt
+        , case when T2.U_num_fk Is not null then 2 else 1 end wishYn
+        FROM item T1 left outer join item_wishlist T2
+        on T2.I_ID_fk = T1.I_ID
+        and T2.U_num_fk = #{U_num}
+        where T1.i_count > 0
+        order by T1.I_sell_cnt DESC
+        limit ${cnt}
+    </select>
+
+    <!-- MD 아이템 고르기 -->
+    <select id="selectMDItem" parameterType="map" resultType="itemDto">
+        select T1.I_ID
+        ,T1.I_name
+        ,T1.I_company
+        ,T1.I_img_URL
+        ,T1.I_O_price
+        ,T1.I_S_Price
+        ,T1.I_reg_date
+        ,T1.I_count
+        ,T1.I_like_count
+        ,T1.I_R_count
+        ,T1.I_cate
+        ,T1.I_sell_cnt
+        , case when T2.U_num_fk Is not null then 2 else 1 end wishYn
+        FROM item T1 left outer join item_wishlist T2
+        on T2.I_ID_fk = T1.I_ID
+        and T2.U_num_fk = #{U_num}
+        where T1.i_count > 0
+        order by T1.I_like_count DESC
+        limit ${cnt}
+    </select>
+
+    <!-- New 아이템 고르기 -->
+    <select id="selectNewItem" parameterType="map" resultType="itemDto">
+        select T1.I_ID
+        ,T1.I_name
+        ,T1.I_company
+        ,T1.I_img_URL
+        ,T1.I_O_price
+        ,T1.I_S_Price
+        ,T1.I_reg_date
+        ,T1.I_count
+        ,T1.I_like_count
+        ,T1.I_R_count
+        ,T1.I_cate
+        ,T1.I_sell_cnt
+        , case when T2.U_num_fk Is not null then 2 else 1 end wishYn
+        FROM item T1 left outer join item_wishlist T2
+        on T2.I_ID_fk = T1.I_ID
+        and T2.U_num_fk = #{U_num}
+        where T1.i_count > 0
+        order by T1.I_reg_date DESC
+        limit ${cnt}
+    </select>
+
+    <!-- 위시리스트에 있는지 조회하기 -->
+    <select id="selectItemInIndex" resultType="Integer">
+        select I_ID
+        from item
+        order by I_ID
+    </select>
+</mapper>

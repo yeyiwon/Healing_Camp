@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.healingcamp.app.dao.MemberMapper">
+
+    <!-- 멤버 등록하기 -->
+    <insert id="insertMember" parameterType="MemberDto">
+        insert into member values (#{U_num},#{U_id},#{U_pw},#{U_name},#{U_phone},#{U_birth},#{U_gender},#{U_email},#{U_field},now())
+    </insert>
+
+    <!--  아이디 중복 검사  -->
+    <select id="selectMemberIdChk" parameterType="String" resultType="MemberDto">
+        select * from member where U_id = #{U_id}
+    </select>
+</mapper>

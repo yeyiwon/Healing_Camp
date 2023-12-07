@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 찜 기능 유저 아이디랑 캠핑장 아이디값만 있으면 됨 -->
+<!--찜 상태 DTO -->
+<mapper namespace="com.healingcamp.app.dao.camp_wishlistMapper">
+
+
+    <!--    // 로그인한 아이디에 좋아요 유무 확인-->
+    <select id="selectCampAddLike" parameterType="map" resultType="Integer">
+        select likeCheck from camp_wishlist
+        where U_num_fk = #{U_num_fk} and C_ID_fk = #{C_ID_fk}
+    </select>
+    <!-- 특정 페이지에서의 사용자의 좋아요 기록 -->
+<!--    // 로그인 한 아이디가 좋아하고있는 목록-->
+    <select id="selectCampjoin" parameterType="map" resultType="Integer">
+        select * from camp C
+        left join camp_wishlist CW
+        ON C.C_ID = CW.C_ID_fk
+        where C_ID = #{C_ID};
+        </select>
+
+<!--    찜 추가 -->
+    <insert id="CampAddLike" parameterType="map">
+        insert camp_wishlist (U_num_fk, C_ID_fk, likeCheck)
+        values (#{U_num_fk}, #{C_ID_fk}, 1);
+    </insert>
+
+<!--     찜 삭제 -1 -->
+    <delete id="CampDeleteLike" parameterType="map">
+        delete from camp_wishlist
+        where U_num_fk = #{U_num_fk} AND C_ID_fk = #{C_ID_fk}
+    </delete>
+
+
+    <!-- 아이템 위시리스트 넣기-->
+    <insert id="insertCampWishlist" parameterType="Camp_wishlistDto">
+        insert into camp_wishlist(U_num_fk, C_ID_fk) values (#{U_num_fk}, #{C_ID_fk})
+    </insert>
+
+    <!-- Delete 캠핑 위시리스트 -->
+    <delete id="deleteCampWishlist" parameterType="Camp_wishlistDto">
+        DELETE FROM camp_wishlist
+        WHERE U_num_fk = #{U_num_fk}
+        AND C_ID_fk = #{C_ID_fk}
+    </delete>
+
+    <!-- 찜목록에 캠프 있는지 체크 (있으면"true" 없으면"false") -->
+    <select id="chkCampWishlist" parameterType="CampDto" resultType="String">
+        SELECT CASE WHEN COUNT(*) = 0 THEN 'false' ELSE 'true' END
+        FROM camp_wishlist
+        WHERE U_num_fk = #{U_num_fk}
+        AND C_ID_fk = #{C_ID_fk};
+    </select>
+
+    <!--  해당 유저 캠핑장 찜목록 가져오기  -->
+    <select id="campwishlist" parameterType="CampDto" resultType="CampDto">
+        select * from camp
+        inner join camp_wishlist
+        on camp.C_ID = camp_wishlist.C_ID_fk
+        where camp_wishlist.U_num_fk=#{U_num};
+    </select>
+</mapper>

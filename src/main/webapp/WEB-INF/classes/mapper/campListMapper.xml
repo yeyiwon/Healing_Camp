@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.healingcamp.app.dao.campListMapper">
+    <!-- 캠핑장 뽑아 오기 -->
+    <select id="selectCampList" parameterType="CampPageHandler" resultType="CampDto">
+        select * from camp C
+        where C.C_ID not in(select R.C_ID
+        from reservation R
+        where R_begin_date between STR_TO_DATE(#{startDate}, '%Y-%m-%d') and STR_TO_DATE(#{endDate}, '%Y-%m-%d')
+        or R_end_date between STR_TO_DATE(#{startDate}, '%Y-%m-%d') and STR_TO_DATE(#{endDate}, '%Y-%m-%d'))
+
+        <if test='keyword != null'>
+            and C_name like concat('%',#{keyword},'%')
+        </if>
+        <if test='type != null'>
+            and C_region_do like concat('%',#{type},'%')
+        </if>
+
+        <choose>
+            <when test='sort == null or sort == 0'>
+                order by C_like_count desc
+            </when>
+            <when test='sort == 1'>
+                order by C_price asc
+            </when>
+            <when test='sort == 2'>
+                order by C_price desc
+            </when>
+            <when test='sort == 3'>
+                order by C_review_count desc
+            </when>
+            <when test='sort == 4'>
+                order by C_score desc
+            </when>
+        </choose>
+        limit #{page}, #{recordSize}
+    </select>
+
+    <select id="selectCampListCount" parameterType="CampPageHandler" resultType="Integer">
+        select count(*) from camp C
+        where C.C_ID not in(select R.C_ID
+        from reservation R
+        where R_begin_date between STR_TO_DATE(#{startDate}, '%Y-%m-%d') and STR_TO_DATE(#{endDate}, '%Y-%m-%d')
+        or R_end_date between STR_TO_DATE(#{startDate}, '%Y-%m-%d') and STR_TO_DATE(#{endDate}, '%Y-%m-%d'))
+
+        <if test='keyword != null'>
+            and C_name like concat('%',#{keyword},'%')
+        </if>
+        <if test='type != null'>
+            and C_region_do like concat('%',#{type},'%')
+        </if>
+
+        <choose>
+            <when test='sort == null or sort == 0'>
+                order by C_like_count desc
+            </when>
+            <when test='sort == 1'>
+                order by C_price asc
+            </when>
+            <when test='sort == 2'>
+                order by C_price desc
+            </when>
+            <when test='sort == 3'>
+                order by C_review_count desc
+            </when>
+            <when test='sort == 4'>
+                order by C_score desc
+            </when>
+        </choose>
+        limit #{page}, #{recordSize}
+    </select>
+
+    <!-- 예약되어있는 매퍼 -->
+    <select id="selectReserveCamp" parameterType="CampPageHandler" resultType="ReservationDto">
+            select *
+            from reservation
+            where R_begin_date between STR_TO_DATE(#{startDate}, '%Y-%m-%d') and STR_TO_DATE(#{endDate}, '%Y-%m-%d')
+            or R_end_date between STR_TO_DATE(#{startDate}, '%Y-%m-%d') and STR_TO_DATE(#{endDate}, '%Y-%m-%d')
+    </select>
+</mapper>

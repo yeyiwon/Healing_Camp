@@ -1,0 +1,76 @@
+body{margin: 0;padding: 0; font-family:'omyu_pretty', sans-serif; background: rgba(19, 32, 67,0.9); font-size: 20px}
+/* header */
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+}
+
+
+.join_cong22 {
+    width: 100%;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #333;
+    transform: translate(-50%, -50%);
+}
+
+.join_complet22 {
+    font-weight: bold;
+    box-shadow: -15px -10px 15px rgba(0, 0, 0, 0.4);
+    width: 150px;
+    height: 60px;
+    border: none;
+    color: #333;
+    border-radius: 55px;
+    background: none;
+    font-size: 18px;
+}
+
+.join_complet22:hover{
+    background: #ef6262;
+    color: #fff;
+}
+.conc_img img{
+    width: 150px;
+    height: 150px;
+}
+
+.join_complet_box22 {
+    padding: 2rem;
+    width: 500px;
+    box-sizing: border-box;
+    height: 500px;
+    border-radius: 60px;
+    box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.4);
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: all 0.3s;
+    opacity: 0;
+    animation: slideInUp 1s ease-in-out forwards;
+}
+
+.join_complet_box22 {
+    background: linear-gradient(45deg, #ccc, #ddd);
+}
+
+
+@keyframes slideInUp {
+    0% {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}

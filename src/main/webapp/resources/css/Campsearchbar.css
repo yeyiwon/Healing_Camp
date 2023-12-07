@@ -1,0 +1,198 @@
+
+
+/* //////////////////// 검색바  */
+
+.in2{
+    display: flex;
+    align-items: baseline;
+}
+
+input:focus {
+    color: black;
+    background: transparent;
+
+}
+
+
+input[type="text"]::before {
+    content: "캠핑장명을 입력해주세요";
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    outline: none;
+    background: rgba(0,0,0,0);
+}
+input[type="text"]::before {
+    content: "출발날짜";
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    outline: none;
+    background: rgba(0,0,0,0);
+}
+
+::-webkit-calendar-picker-indicator {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    right: 15px;
+}
+
+/*input[type=date]::-webkit-datetime-edit-text {*/
+/*    -webkit-appearance: none;*/
+/*    display: none;*/
+/*}*/
+/*input[type=date]::-webkit-datetime-edit-month-field{*/
+/*    -webkit-appearance: none;*/
+/*    display: none;*/
+/*}*/
+/*input[type=date]::-webkit-datetime-edit-day-field {*/
+/*    -webkit-appearance: none;*/
+/*    display: none;*/
+/*}*/
+/*input[type=date]::-webkit-datetime-edit-year-field {*/
+/*    -webkit-appearance: none;*/
+/*    display: none;*/
+/*}*/
+
+
+    .date-input {
+        margin: 0;
+        cursor: pointer;
+        color: #000;
+        height: 100%;
+        width: 185px;
+        box-sizing: border-box;
+        font-weight: bold;
+        font-size: 20px;
+        outline: none;
+        background: rgba(255, 255, 255, 0);
+        border: none;
+    }
+
+
+    .category-select {
+        outline: none;
+        letter-spacing: 1px;
+        font-size: 20px;
+        /*padding: 10px;*/
+    border-radius: 5px;
+    border: none;
+    height: 100%;
+    margin-right: 10px;
+
+    background: rgba(255, 255, 255, 0);
+}
+.search-button {
+    padding: 10px;
+    border: none;
+    /* border: 1px solid #1d5b79; */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0);
+    background: #1D5B79;
+    color: #fff;
+    cursor: pointer;
+    width: 60px;
+    font-weight: bold;
+    font-size: 15px;
+    height: 60px;
+}
+
+
+.search-button:hover{
+    background: #141E46;
+    /* border: 1px solid #141E46; */
+}
+
+.reset-button {
+    padding: 10px;
+    border: none;
+    /* border: 1px solid #1d5b79; */
+    border-radius: 50%;
+    /* box-shadow: -5px, 0, 2px(0,0,0,38.3); */
+    background-color: #EF6262;
+    color: #fff;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.reset-button:hover{
+    background: #141E46;
+    /* border: 1px solid #141E46; */
+}
+
+.search_box{
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 900px;
+    /*height: 110px;*/
+    display: flex;
+    /* align-items: center; */
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: -10px 10px 10px rgba(0,0,0,1);
+    border-radius: 100px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.search-bar {
+    /* display: flex;
+    align-items: center; */
+    cursor: pointer;
+    position: relative;
+}
+.search-bar > img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    transform: translate(0,-50%);
+    top: 50%;
+    right: 15px;
+    margin: 0;
+}
+.search-input{
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0);
+    width: 155px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.list_bar{
+    /*height: 100%;*/
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.list_h3{
+    width: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+input {
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* 검색바 끝 */
+
+/********************************************/
+/*.maintext {*/
+
+/*}*/
+/*.search_box {*/
+/*    width: 100%;*/
+/*    max-width: 950px;*/
+/*    height: 130px;*/
+/*}*/
+/*.in2 {*/
+/*    flex-wrap: nowrap;*/
+/*}*/

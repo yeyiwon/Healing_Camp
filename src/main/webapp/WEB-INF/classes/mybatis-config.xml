@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <!-- 별칭 정하는곳: 앞으로 BoardDto 라고 하면 com.healingcamp.app.domain.Ex02_BoardDto 로 알아들음 -->
+
+        <typeAlias alias="Camp_reviewDto" type="com.healingcamp.app.domain.Camp_reviewDto" />
+        <typeAlias alias="Camp_wishlistDto" type="com.healingcamp.app.domain.Camp_wishlistDto" />
+        <typeAlias alias="CampDto" type="com.healingcamp.app.domain.CampDto" />
+        <typeAlias alias="CampPageHandler" type="com.healingcamp.app.domain.CampPageHandler" />
+
+
+        <typeAlias alias="BuyDto" type="com.healingcamp.app.domain.BuyDto" />
+        <typeAlias alias="CartDto" type="com.healingcamp.app.domain.CartDto" />
+        <typeAlias alias="Insert_cartDto" type="com.healingcamp.app.domain.Insert_cartDto" />
+        <typeAlias alias="Insert_itemwishlistDto" type="com.healingcamp.app.domain.Insert_itemwishlistDto" />
+
+        <typeAlias alias="Item_reviewDto" type="com.healingcamp.app.domain.Item_reviewDto" />
+        <typeAlias alias="Item_wishlistDto" type="com.healingcamp.app.domain.Item_wishlistDto" />
+        <typeAlias alias="StorePageHandler" type="com.healingcamp.app.domain.StorePageHandler"/>
+        <typeAlias alias="ItemDto" type="com.healingcamp.app.domain.ItemDto" />
+        <typeAlias alias="MemberDto" type="com.healingcamp.app.domain.MemberDto" />
+
+
+        <typeAlias alias="MypageDto" type="com.healingcamp.app.domain.MypageDto" />
+        <typeAlias alias="PointDto" type="com.healingcamp.app.domain.PointDto" />
+        <typeAlias alias="ReservationDto" type="com.healingcamp.app.domain.ReservationDto" />
+    </typeAliases>
+</configuration>

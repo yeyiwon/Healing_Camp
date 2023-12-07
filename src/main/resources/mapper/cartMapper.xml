@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.healingcamp.app.dao.cartMapper">
+    <!-- 카트에 아이템 넣기 -->
+    <insert id="insertCart" parameterType="CartDto">
+        insert into buy(U_num_fk,I_ID_fk) values (#{U_num_fk} #{I_ID_fk})
+    </insert>
+
+    <!-- Select 아이템 from 장바구니 -->
+    <select id="selectCart" parameterType="map" resultType="CartDto">
+        SELECT * FROM cart
+        WHERE U_num = #{U_num} AND Cart_num = #{Cart_num} AND I_ID = #{I_ID}
+    </select>
+
+    <!-- Delete 아이템 from 장바구니 -->
+    <delete id="deleteCart" parameterType="map">
+        DELETE FROM cart
+        WHERE U_num = #{U_num} AND Cart_num = #{Cart_num} AND I_ID = #{I_ID}
+    </delete>
+
+
+
+
+    <!-- =================================== 종민 ====================================== -->
+    <!-- 카트에 상품 있는지 체크 (상품 있으면"true" 없으면"false") -->
+    <select id="chkCartlist" parameterType="CartDto" resultType="String">
+        SELECT CASE WHEN COUNT(*) = 0 THEN 'false' ELSE 'true' END
+        FROM cart
+        WHERE U_num_fk = #{U_num_fk}
+        AND I_ID_fk = #{I_ID_fk};
+    </select>
+
+    <!-- 해당유저 카트리스트 불러오기 -->
+    <select id="cartlist" parameterType="CartDto" resultType="CartDto">
+        select * from cart
+        where U_num_fk=#{U_num}
+    </select>
+
+    <!-- 카트에 아이템 넣기 -->
+    <insert id="insertCartlist" parameterType="Insert_cartDto">
+        insert into cart(U_num_fk,I_ID_fk,Item_cart_cnt) values (#{U_num_fk} ,#{I_ID_fk}, #{Item_cart_cnt})
+    </insert>
+
+    <!-- 장바구니 상품 갯수 업데이트  -->
+    <update id="updateCartItemCnt" parameterType="CartDto">
+        update cart
+        set Item_cart_cnt = #{Item_cart_cnt}
+        where U_num_fk = #{U_num_fk}
+        and I_ID_fk = #{I_ID_fk};
+    </update>
+
+    <!-- 장바구니 상품 하나 제거 -->
+    <delete id="deleteCartOne" parameterType="CartDto">
+        delete from cart
+        where U_num_fk = #{U_num_fk}
+        AND I_ID_fk = #{I_ID_fk}
+    </delete>
+
+    <!-- 장바구니 상품 모두 제거 -->
+    <delete id="deleteCartAll" parameterType="CartDto">
+        delete from cart
+        where U_num_fk = #{U_num_fk}
+    </delete>
+</mapper>

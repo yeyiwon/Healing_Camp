@@ -1,0 +1,24 @@
+.container{
+    margin-top: 180px;
+}
+.s_brand_cate_bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+.s_brand_cate{
+    width: 45%;
+    height: 100px;
+    box-shadow: 0 0 2px #bbb;
+    font-size: 38px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 100px;
+    color: #aaa;
+    transition: font-size 0.6s;
+}
+.s_brand_cate:hover{
+    font-size: 45px;
+    color: #1D5b79;
+}

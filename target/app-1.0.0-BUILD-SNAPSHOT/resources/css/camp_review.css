@@ -1,0 +1,35 @@
+.CD_REVIEW_container{
+    width: 100%;
+    /*margin: 20px auto;*/
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /*overflow: hidden;*/
+}
+.CD_review {
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.CD_review img{
+    width: 600px;
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.CD_review h2 {
+    font-size: 25px;
+    color: #333;
+}
+
+.CD_review p {
+    font-size: 20px;
+    color: #666;
+}
+
+.CD_user-info {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #888;
+}

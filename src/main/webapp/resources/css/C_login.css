@@ -1,0 +1,178 @@
+body{margin: 0;padding: 0; font-family:'omyu_pretty', sans-serif;}
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+}
+a {text-decoration: none;color: inherit;cursor: pointer;}
+.box{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(19, 32, 67,0.9);
+}
+
+.login_box {
+    width: 1300px;
+    height: 80%;
+    display: flex;
+    /* background: #F1B4BB; */
+    position: absolute;
+    box-shadow: -27px 20px 20px rgba(0,0,0,0.5);
+    left: 50%;
+    z-index: 99999;
+    border-radius: 40px;
+    box-sizing: border-box;
+    top: 50%;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+}
+/*.pan{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: rgba(0,0,0,0.3);*/
+/*}*/
+
+.login_logo{
+    width: 120px;
+    height: 120px;
+
+}
+.login_logo img{
+    width: 100%;
+    height: 100%;
+}
+.login_logo img a{
+    width: 100%;
+    height: 100%;
+}
+
+
+.login_L{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #1D5b79;
+    /*background: rgb(241, 180, 187);*/
+}
+.login_top{
+    display: contents;
+    width: 100%;
+    /* height: 120px; */
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+
+.login_R{
+    width: 50%;
+    height: 100%;
+    background: url(../img/night-campfire-night.jpg) no-repeat center/ cover;
+}
+
+.login_text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.id_pw_text {
+    width: 60%;
+    height: 65px;
+    text-align: center;
+    /* border-bottom: 1px solid rgb(234, 238, 236); */
+    border-radius: 30px;
+    /* padding: 0px 0px 8px; */
+    gap: 10px;
+    font-size: 1.5rem;
+}
+.lt_1{
+    font-size: 65px;
+}
+.lt_2{
+    font-size: 30px;
+}
+
+.login_text > input {
+    /*appearance: none;*/
+    outline: none;
+    border: none;
+    background-color: #FDF0F0;
+    box-shadow: none;
+}
+.com_btn {
+    color: #132043;
+    border: none;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    font-size: 22px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.join_complet{
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    width: 260px;
+    color: #fff;
+    height: 66px;
+    box-shadow: -14px 13px 20px rgba(0,0,0,0.6);
+    background: #1D5b79;
+    border-radius: 30px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.join_complet:hover{
+    background: rgba(19, 32, 67,0.9);
+}
+@media (max-width: 780px) {
+    .login_box{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+
+    }
+    .login_R{display: none}
+    .login_L{display: flex;
+            width: 100%;
+            height: 100%;
+            /*background: url(../img/night-campfire-night.jpg) no-repeat center / cover;*/
+            gap: 30px;
+            justify-content: center;
+    }
+
+    /*.login_logo{display: none;}*/
+    .login_top {
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        /*text-align: center;*/
+    }
+    .lt_1 {font-size: 80px;margin-bottom: 15px;
+    }
+    .lt_2 {font-size: 38px;}
+
+    .id_pw_text {
+        width: 52%;
+        height: 65px;
+        text-align: center;
+        border-radius: 30px;
+        gap: 10px;
+        font-size: 1em;
+    }
+    .com_btn {
+        color: #fff;
+        font-size: 25px;
+    }
+}

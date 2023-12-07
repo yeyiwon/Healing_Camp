@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.healingcamp.app.dao.reservationMapper">
+
+    <!--insert 예약 정보-->
+    <insert id="insertReservation" parameterType="ReservationDto">
+        insert into reservation (R_num, U_num, C_ID, R_begin_date, R_end_date)
+        values (null, #{U_num}, #{C_ID}, #{R_begin_date}, #{R_end_date})
+    </insert>
+
+    <!-- Select 예약 정보 -->
+    <select id="selectReservation" parameterType="int" resultType="ReservationDto">
+        SELECT *
+        FROM reservation
+        WHERE R_num = #{R_num}
+    </select>
+
+    <!-- Delete 예약 정보 -->
+    <delete id="deleteReservation" parameterType="int">
+        DELETE FROM reservation
+        WHERE R_num = #{R_num}
+    </delete>
+
+</mapper>

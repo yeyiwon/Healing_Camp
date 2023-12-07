@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.healingcamp.app.dao.itemMapper">
+    <!-- 아이템 넣기 -->
+    <insert id="insertItem" parameterType="ItemDto">
+        insert into item (I_name, I_company, I_img_URL, I_O_price, I_reg_date, I_count)
+        values (#{I_name}, #{I_company}, #{I_img_URL}, #{I_O_price}, #{I_reg_date}, #{I_count})
+    </insert>
+
+
+    <!-- 전체 글 수 뽑기 -->
+    <select id="countItem" resultType="int">
+        select count(*) from board
+    </select>
+
+    <!-- 전체 고르기 -->
+    <select id="seleteAll" resultType="ItemDto">
+        select * from item order by I_ID desc
+    </select>
+
+    <!-- 아이템 하나 가져오기 -->
+    <select id="selectItemOne" parameterType="int" resultType="ItemDto">
+        select * from item
+        where I_ID = #{I_ID}
+    </select>
+
+    <!-- 세일 가격 넣기 -->
+    <update id="updateSalePrice" parameterType="int">
+        update item set I_S_price = #{I_S_price} where I_ID = #{I_ID}
+    </update>
+
+    <!-- 해당유저 카트리스트에 있는 I_ID의 아이템 리스트정보 가져오기  -->
+    <select id="itemlist" parameterType="ItemDto" resultType="ItemDto">
+        select * from item
+        inner join cart
+        on item.I_ID = cart.I_ID_fk
+        where cart.U_num_fk=#{U_num};
+    </select>
+
+    <!-- 해당유저 캠프리뷰 가져오기  -->
+    <select id="campreviewlist" parameterType="CampDto" resultType="CampDto">
+        select * from camp
+        inner join camp_review
+        on camp.C_ID = camp_review.C_ID_fk
+        where camp_review.U_num_fk=#{U_num};
+    </select>
+
+    <!--  해당상품 리뷰 리스트정보 가져오기  -->
+    <select id="itemreviewlist" parameterType="Item_reviewDto" resultType="Item_reviewDto">
+        select * from item_review
+        where item_review.I_ID_fk = #{I_ID};
+    </select>
+</mapper>

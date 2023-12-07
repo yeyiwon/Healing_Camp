@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.healingcamp.app.dao.item_wishlistMapper">
+
+
+    <!--  ==================================종민=====================================  -->
+    <!-- 아이템 위시리스트 넣기-->
+    <insert id="insertItemWishlist" parameterType="Insert_itemwishlistDto">
+        insert into item_wishlist(U_num_fk, I_ID_fk) values (#{U_num_fk}, #{I_ID_fk})
+    </insert>
+
+    <!-- Delete 아이템 위시리스트 -->
+    <delete id="deleteItemWishlist" parameterType="Item_wishlistDto">
+        DELETE FROM item_wishlist
+        WHERE U_num_fk = #{U_num_fk}
+        AND I_ID_fk = #{I_ID_fk}
+    </delete>
+
+    <!-- 찜목록에 상품 있는지 체크 (상품 있으면"true" 없으면"false") -->
+    <select id="chkItemWishlist" parameterType="Insert_itemwishlistDto" resultType="String">
+        SELECT CASE WHEN COUNT(*) = 0 THEN 'false' ELSE 'true' END
+        FROM item_wishlist
+        WHERE U_num_fk = #{U_num_fk}
+        AND I_ID_fk = #{I_ID_fk};
+    </select>
+
+    <!--  해당 유저 상품 찜목록 가져오기  -->
+    <select id="itemwishlist" parameterType="ItemDto" resultType="ItemDto">
+        select * from item
+        inner join item_wishlist
+        on item.I_ID = item_wishlist.I_ID_fk
+        where item_wishlist.U_num_fk=#{U_num};
+    </select>
+    <!-- ============================================================================ -->
+
+
+    <!-- Select 아이템 위시리스트 -->
+    <select id="selectItemWishlist" parameterType="map" resultType="Item_wishlistDto">
+        SELECT *
+        FROM item_wishlist
+        WHERE U_num_fk = #{U_num_fk} AND I_ID_fk = #{I_ID_fk} AND I_W_num = #{I_W_num}
+    </select>
+
+
+</mapper>

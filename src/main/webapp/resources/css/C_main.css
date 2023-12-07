@@ -1,0 +1,432 @@
+body{margin: 0;padding: 0; font-family: 'omyu_pretty', sans-serif;}
+
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.header{
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.member {
+    height: 70px;
+    font-weight: 900;
+    color: #fff;
+    display: flex;
+    gap: 60px;
+    padding-right: 40px;
+}
+
+.mainP{
+    width: 100%;
+    height: 100vh;
+    /* background: #FF6969; */
+    display: flex;
+    background: rgba(255,255,255,0.1);
+}
+
+
+.mainPL{
+    width: 30%;
+    height: 100vh;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    opacity: 0.2;
+    background: url(../img/16284.jpg) center /contain;
+
+}
+
+.maintext{
+    display: flex;
+    width: 820px;
+    gap: 18px;
+    height: 500px;
+    /* background: rgba(255, 255, 255, 0.6); */
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    z-index: 99;
+    flex-direction: column;
+}
+.mainPR{
+    width: 70%;
+    height: 100vh;
+    z-index: -999;
+    background: #1D5B79;
+    /*position: relative;*/
+    /*background: #05131a;*/
+    /*flex-direction: column;*/
+    /*background: rgba(19, 32, 67,0.9);*/
+    /*background: rgb(19, 32, 67);*/
+     /*background: #FFF5E0; */
+    /* background: url(./img/beautiful-fire-pit-near-winter-camping-ground.jpg) no-repeat center / cover; */
+    /* background: url(./img/3712.jpg) no-repeat center / cover; */
+
+}
+.opacity_txt_box {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+}
+label {
+    display: block;
+    margin-top: 15px;
+    color: #555555;
+}
+.searchTXT{
+    color: #1D5B79;
+    width: 800px;
+    height: 270px;
+    font-size: 55px;
+    font-weight: 900;
+}
+/* 아이템 박스  */
+
+.C_Lanking{
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    font-size: 25px;
+    color: #141E46;
+    position: relative;
+}
+
+.hot_msg{
+
+    font-size: 55px;
+    line-height: 120px;
+    height: 120px;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.I_Lanking{
+    width: 100%;
+    margin: 0;
+    font-size: 25px;
+    color: #141E46;
+    height: 600px;
+}
+
+.item-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    /*max-width: 100%;*/
+    height: 350px;
+    margin: 20px auto;
+
+}
+
+.item {
+    box-shadow: -10px 0 10px rgba(0,0,0,0.5);
+    width: calc((100% - 20px) / 4);
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+}
+.item img {width: 100%;height: 100%;object-fit: cover;}
+.item a{display: block;width: 100%;height: 100%;}
+.item:hover {transform: translate(0, -25px);}
+
+.item-content {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+}
+.item_txt{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.item h3 {margin: 0;font-size: 28px;}
+
+.item h3:nth-child(2){
+    max-height: 55px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.item p {
+    margin: 10px 0 0;
+    font-size: 20px;
+    /* opacity: 0.8; */
+}
+.shape {
+    position: absolute;
+    /* top: 50%; */
+    z-index: -9999;
+    bottom: 0;
+    right: 100px;
+    /* left: 0; */
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translate(-100px, 0);
+    width: 700px;
+    max-width: 700px;
+    height: 700px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background: url(../img/mainpageimg.jpg) no-repeat center / cover;
+}
+.btn_box{
+    width: 400px;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.main_btn{
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    background: #ef6262;
+    color: #fff;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    cursor: pointer;
+}
+.main_btn:hover{
+    background: #9a3838;
+}
+
+.footer_img {
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    background: url("../img/back1.png") no-repeat center / cover;
+    opacity: 0.5;
+}
+.p50img{
+    position: absolute;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    opacity: 0.3;
+    /* float: right; */
+    background: url(../img/16284.jpg) no-repeat center / contain;
+    z-index: -1;
+
+}
+
+.mid_bar{
+    width: 100%;
+    height: 600px;
+    background: url(../img/imgimg.png) no-repeat center / cover;
+}
+.mid_txt_bar{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    gap: 20px;
+    /* padding: 20px; */
+    padding: 5em;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mid_txt_bar > h3 {
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    font-size: 40px;
+}
+.mid_txt_bar > h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 70px;
+    width: 500px;
+}
+
+.logo {
+    float: left;
+}
+.logo > a > img {
+    width: 200px;
+    height: 200px;
+}
+
+/* 햄버거 메뉴판 */
+
+.hamberg {
+    width: 48px;
+    height: 48px;
+    padding: 7px;
+    box-sizing: border-box;
+    position: relative;
+    right: 0;
+    display: none;
+    z-index: 9999999;
+}
+.line {
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background-color: #f1f1f1;
+    margin: 5px 0;
+}
+#line_top, #line_bot {
+    transition: all 0.3s;
+}
+
+/*메뉴판 */
+
+.weather {
+    width: 450px;
+    height: 200px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*#ida63669c7a83b7 {*/
+/*    border-radius: 20px;*/
+/*    opacity: 0.8;*/
+/*}*/
+
+/* footer */
+/* .footer {
+    width: 100%;
+    height: 400px;
+    background: black;
+} */
+
+
+.panpan{
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3) ;
+}
+
+.A11{
+    gap: 40px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    border-radius: 50px;
+    flex-direction: column;
+
+}
+
+.A12{
+    gap: 40px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.A113{
+    border-radius: 25px;
+    height: calc((100% - 30px) / 3 );
+    overflow: hidden;
+    width: 100%;
+}
+
+.A112{
+    border-radius: 35px;
+    width: 100%;
+    height: calc((100% - 30px) / 2 );
+    overflow: hidden;
+}
+.A112 img{
+    width: 100%;
+    height: 100%;
+}
+.A113 img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*.A112{*/
+/*    display: flex;*/
+/*}*/
+/*.A112{*/
+/*    display: flex;*/
+/*}*/
+
+
+
+/* /////////////////// 반응형 ////////////////*/
+
+@media (max-width: 768px) {
+    .mainPL {display: none;}
+    .member {display: none}
+    .mainPR {width: 100%;}
+    .shape{width: 100%;
+            border-radius: 0}
+    .hamberg{display: block;
+            right: 0;}
+
+    .maintext {
+        width: 90%;
+        display: flex;
+        position: absolute;
+        left: 20px;
+        top: 45%;
+        transform: translate(0, -45%);
+    }
+    .in2 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+
+/* Add more media queries as needed */
+
+/* Rest of your existing styles */
+
+.category-select {
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    /* padding: 10px; */
+    border-radius: 5px;
+    border: none;
+    /* height: 100%; */
+    width: 100%;
+    height: 60px;
+    margin-right: 10px;
+    background: rgba(255, 255, 255, 0);
+}
+.item {
+    box-shadow: -10px 0 10px rgba(0,0,0,0.5);
+    width: calc((100% - 20px) / 2);
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+}
+}

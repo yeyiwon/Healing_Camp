@@ -1,0 +1,144 @@
+.sl_main{
+    margin-top: 170px;
+    margin-bottom: 80px;
+}
+
+/**************** 카테고리 바 *****************/
+.s_cate_bar{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+}
+.s_cate_menu{
+    width: calc(100% / 4);
+    height: 55px;
+    line-height: 55px;
+    box-shadow: 0 0 1px #aaa;
+    text-align: center;
+
+    transition: all 0.3s;
+}
+.s_cate_menu_hover{
+    background: #ccc;
+}
+.s_cate_menu_active{
+    background: #1D5B79;
+    color: #fff;
+}
+
+
+/**************** 리스트 박스 *****************/
+.s_item_main{
+    margin-top: 50px;
+    position: relative;
+    font-size: 24px;
+}
+.s_list_count>span{
+    font-weight: 900;
+}
+.s_sort_box{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    color: #555;
+
+    display: flex;
+}
+.s_sort_btn{
+    padding: 5px 7px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.s_sort_btn_hover{
+    color: #000;
+}
+.s_sort_btn_selected{
+    font-weight: 900;
+    color: #EF6262;
+}
+.s_list_box{
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.s_item_box{
+    width: calc((100% - (40px * 3)) / 4);
+    height: 420px;
+
+}
+.s_item_a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(28, 89, 120, 0.2);*/
+}
+.s_item_img_box{
+    width: 100%;
+    font-size: 0;
+    box-shadow: 0 0 2px #bbb;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.s_item_img_box:hover .s_item_btn_box{
+    bottom: 20px;
+}
+.s_item_img{
+    width: 100%;
+}
+.s_item_btn_box{
+    width: 110px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 0.5s;
+}
+.s_item_btn{
+    height: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 3px #ddd;
+}
+.s_item_btn img{
+    height: 100%;
+}
+.s_item_text{
+    padding: 5px;
+}
+.s_item_company{
+    font-size: 20px;
+    font-weight: 700;
+    color: #666;
+}
+.s_item_title{
+    margin-top: 7px;
+    font-size: 24px;
+    /*font-weight: 700;*/
+
+    max-height: 55px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.s_item_price{
+    margin-top: 7px;
+}
+.s_item_o_price{
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #666;
+}
+.s_item_s_price{
+    font-weight: 700;
+    color: #EF6262;
+}

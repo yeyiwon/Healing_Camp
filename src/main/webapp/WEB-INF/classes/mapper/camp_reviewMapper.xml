@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.healingcamp.app.dao.camp_reviewMapper">
+
+    <!--  해당캠핑장 리뷰 리스트정보 가져오기  -->
+    <select id="campreviewlist" parameterType="Camp_reviewDto" resultType="Camp_reviewDto">
+        select * from camp_review
+        where camp_review.C_ID_fk = #{C_ID};
+    </select>
+
+    <select id="selectCampReview" parameterType="Camp_reviewDto" resultType="Camp_reviewDto">
+        select * from camp_review
+        where camp_review.C_ID_fk = #{C_ID};
+    </select>
+
+    <!--  해당유저 캠핑장 리뷰 리스트 가져오기  -->
+    <select id="usercampreviewlist" parameterType="Camp_reviewDto" resultType="Camp_reviewDto">
+        select * from camp_review
+        where camp_review.U_num_fk = #{U_num};
+    </select>
+
+    <!-- 캠핑장 리뷰 글쓰기 -->
+    <insert id="insertCampReview" parameterType="Camp_reviewDto">
+        INSERT INTO camp_review (C_ID_fk, C_name, U_num_fk, U_ID_fk, C_R_title, C_R_text, R_date)
+        VALUES (#{C_ID_fk},#{C_name}, #{U_num_fk}, #{U_ID_fk}, #{C_R_title}, #{C_R_text}, #{R_date});
+    </insert>
+
+    <!-- 해당유저가 해당캠핑장 리뷰 이미 작성했는지 체크 (상품 있으면"true" 없으면"false") -->
+    <select id="chkCampReviewList" parameterType="Camp_reviewDto" resultType="String">
+        SELECT CASE WHEN COUNT(*) = 0 THEN 'false' ELSE 'true' END
+        FROM camp_review
+        WHERE U_num_fk = #{U_num_fk}
+        AND C_ID_fk = #{C_ID_fk};
+    </select>
+
+    <!--  캠핑장 리뷰 삭제  -->
+    <delete id="deleteCampReview" parameterType="Camp_reviewDto">
+        delete from camp_review
+        where U_num_fk = #{U_num_fk}
+        AND C_ID_fk = #{C_ID_fk}
+    </delete>
+
+    <!--  캠핑장 리뷰 업데이트  -->
+    <update id="updateCampReview" parameterType="Camp_reviewDto">
+        update camp_review
+        set C_R_title = #{C_R_title}
+        , C_R_text = #{C_R_text}
+        , C_R_update = now()
+        , C_R_score = #{C_R_score}
+        where U_num_fk = #{U_num_fk}
+        and C_ID_fk = #{C_ID_fk}
+    </update>
+
+</mapper>

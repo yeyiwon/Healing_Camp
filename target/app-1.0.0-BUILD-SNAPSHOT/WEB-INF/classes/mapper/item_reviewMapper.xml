@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.healingcamp.app.dao.item_reviewMapper">
+    <!--  아이템 리뷰 글쓰기  -->
+    <insert id="insertItemReview" parameterType="Item_reviewDto">
+        insert into item_review (I_ID_fk, U_num_fk, U_ID_fk, I_R_title, I_R_text ,I_R_score)
+        values (#{I_ID}, #{U_num}, #{U_ID }, #{I_R_title}, #{I_R_text}, #{I_R_score});
+    </insert>
+
+    <!--  해당유저 캠핑장 리뷰 리스트 가져오기  -->
+    <select id="useritemreviewlist" parameterType="int" resultType="Item_reviewDto">
+        select * from item_review
+        where U_num_fk = #{U_num};
+    </select>
+
+    <!--  아이템 리뷰 삭제  -->
+    <delete id="deleteItemReview" parameterType="Item_reviewDto">
+        delete from item_review
+        where U_num_fk = #{U_num}
+        AND I_ID_fk = #{I_ID}
+    </delete>
+    <!--  아이템 리뷰 업데이트  -->
+    <update id="updateItemReview" parameterType="Item_reviewDto">
+        update item_review
+        set I_R_title = #{I_R_title}
+        , I_R_text = #{I_R_text}
+        , I_R_update = now()
+        , I_R_score = #{I_R_score}
+        where U_num_fk = #{U_num}
+        and I_ID_fk = #{I_ID}
+    </update>
+</mapper>

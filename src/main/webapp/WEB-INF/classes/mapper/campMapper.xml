@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+<!--</beans>-->
+
+<!--할 일
+    캠핑장 리스트 출력 select *
+    data-set 정렬 방식
+    무한스크롤이든 페이징이든 현재 표시되고 있는 리스트 개수
+    현재 좋아요 개수
+    현재 리뷰 평점
+    캠핑장 디테일 아이디값 -->
+
+<mapper namespace="com.healingcamp.app.dao.campMapper">
+
+    <!--    캠핑장 리스트 전체 출력 -->
+    <select id="camplist" parameterType="map" resultType="CampDto">
+        select * from camp
+        where true
+        <choose>
+            <when test='keyword != null'>
+                and C_name like concat('%',#{keyword},'%')
+            </when>
+            <when test='type != null'>
+                and C_region_do like concat('%',#{type},'%')
+            </when>
+        </choose>
+
+        <if test='sort != null and sort.equals("인기순")'>
+            order by C_like_count desc
+        </if>
+        <if test='sort != null and sort.equals("가격낮은순")'>
+            order by C_price asc
+        </if>
+        <if test='sort != null and sort.equals("가격높은순")'>
+            order by C_price desc
+        </if>
+        <if test='sort != null and sort.equals("리뷰많은순")'>
+            order by C_review_count desc
+        </if>
+        <if test='sort != null and sort.equals("평점높은순")'>
+            order by C_score desc
+        </if>
+        limit #{offset}, #{pageSize}
+    </select>
+
+    <!-- 검색된 개수 가져오기 -->
+    <select id="getCampCount" parameterType="map" resultType="int">
+        select count(*) from camp
+        where true
+        <choose>
+            <when test='keyword != null'>
+                and C_name like concat('%',#{keyword},'%')
+            </when>
+            <when test='type != null'>
+                and C_region_do like concat('%',#{type},'%')
+            </when>
+        </choose>
+    </select>
+
+
+    <select id="selectCampOne" parameterType="int" resultType="CampDto">
+        select * from camp
+        where C_ID = #{C_ID}
+    </select>
+
+    <!--    캠핑장 전체 갯수 출력-->
+    <!--    <select id="campcount" resultType="int">-->
+    <!--        select count(*) from camp-->
+    <!--    </select>-->
+
+    <!--캠핑장 디테일 페이지로 갈 id 값 -->
+    <select id="campdetail" resultType="CampDto" parameterType="int">
+        select * from camp where C_ID = #{C_ID}
+    </select>
+
+</mapper>
+
+        <!--&lt;!&ndash;현재 검색 된 리스트 개수  &ndash;&gt;-->
+        <!--    <select id="selectCampingListCount" resultType="int">-->
+        <!--        select count(*) from camp where id = #{List_count}-->
+        <!--    </select>-->
+        <!--    첫 번쨰 주소값으로 search 해서 메인 페이지와 연동(?) 출력 -->
+        <!--    <select id="selectCampList" resultType="campDto">-->
+        <!--        select * from camp where C_region_do like #{add_Keyword}'%'-->
+        <!--    </select>-->
+
+
+        <!--   캠핑장 정렬  -->
+
+
+
+
+        <!--    인기순 (좋아요 많은 순) -->
+
+        <!--    리뷰 많은 순 -->
+
+
+        <!--    가격 높은 순 -->
+
+        <!--    가격 낮은 순-->
+
+
+        <!--    <select id="campList" resultType="com.healingcamp.app.domain.CampDto" parameterType="camp" >-->
+        <!--        select * from camp where C_name = #{campid}-->
+        <!--    </select>-->
+        <!--    <select id="campList" resultType="string" >-->
+        <!--        select * from camp where C_ID = #{campname}-->
+        <!--    </select>-->
+
+        <!-- ////////////////////////////////////여긴 캠핑장 디테일 //////////////////////////-->
+        <!-- 캠핑장 디테일 아이디
+        좋아요 추가 Dto는 likebtn 있음 -->
+        <!--    <select id="like_count" resultType="bool">-->
+        <!--        select * from C_like_chk where = 0 or 1-->
+        <!--    </select>-->
+
+
+        <!--    <insert id="add_wishlist">-->
+        <!--        insert into camp_wishlist(U_num_fk, C_ID_fk)-->
+        <!--        values (#{UserID}, #{campID})-->
+        <!--    </insert>-->
+
+        <!--    좋아요 삭제 -->
+        <!--    <delete id="delete_wishlist">-->
+        <!--        delete camp_wishlist-->
+
+        <!--    </delete>-->
+
+        <!--////////////////////////////////////////////////////-->
+
+        <!-- 리뷰 쓰기 -->
+        <!--    <insert id="reviewWrite">-->
+        <!--        insert into camp_review () values ()-->
+        <!--    </insert>-->
+
+        <!--    리뷰 개수 나중에 이 리뷰 갯수로 평균 구하기  -->
+        <!--    <select id="selectReviewCount" resultType="com.healingcamp.app.domain.Camp_reviewDto">-->
+        <!--        select count(*) from camp_review-->
+        <!--    </select>-->

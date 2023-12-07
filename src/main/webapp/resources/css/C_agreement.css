@@ -1,0 +1,100 @@
+/* 약관 내용 */
+.agr {
+    color: #141E46;
+    box-shadow: -20px 30px 19px rgba(19, 32, 67,0.7);
+    border-radius: 40px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    padding: 1em;
+    background: #fff;
+    transform: translate(-50%, -50%);
+}
+.all_Consent {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+.all_Consent02 {
+    font-weight: bold;
+    display: flex;
+    font-size: 30px;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 179%;
+
+}
+
+    .consent_titl {
+        box-sizing: border-box;
+        padding: 15px;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 20px;
+        white-space: pre-line;
+}
+
+.consent_titl > div {
+    display: flex;
+    flex-flow: row;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.consent_menu {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.consent_menu > div {
+    margin-right: 10px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.consent_menu > div > strong {
+    margin: 1px 0 0 1px;
+    font-weight: bold;
+    color: rgb(255, 61, 0);
+}
+
+.misung {
+    color: rgb(255, 61, 0);
+    font-weight: bold;
+    margin: 0 0 -4px 25px;
+}
+
+/* 다음 버튼 */
+.consent_next {
+    width: 100%;
+    height: 80px;
+    border: none;
+    text-align: center;
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* margin-top: 50px;
+    }
+     */
+}
+.consent_next_btn {
+    margin-top: 12px;
+    /* float: right; */
+    /* float: left; */
+    width: 225px;
+    color: #fff;
+    height: 70px;
+    background: #132043;
+    border-radius: 40px;
+    font-size: 23px;
+    cursor: pointer;
+    font-weight: bold;
+
+}

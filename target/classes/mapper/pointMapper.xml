@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.healingcamp.app.dao.pointMapper">
+    <!-- Insert 포인트 정보 -->
+    <insert id="insertPoint" parameterType="Integer">
+        INSERT INTO points (U_num_fk, C_point, Point_num)
+        VALUES (#{U_num}, 0, null)
+    </insert>
+
+    <!-- 포인트 테이블에 정보가 있는지 확인하기 -->
+    <select id="selectUserYn" parameterType="Integer" resultType="int">
+        select IF(count(*) = 1, 1, 0)
+        from points
+        where U_num_fk = #{U_num}
+    </select>
+
+    <!-- 포인트 수정 사항 업데이트 하기-->
+    <update id="updatePoints" parameterType="PointDto">
+        update points
+        set C_point = #{C_point}
+        where U_num_fk = #{U_num_fk}
+    </update>
+
+    <!--포인트 가지고 오기-->
+    <select id="Pointlist" parameterType="int" resultType="Integer">
+        select C_point from points where U_num_fk = #{U_num_fk}
+
+    </select>
+
+</mapper>

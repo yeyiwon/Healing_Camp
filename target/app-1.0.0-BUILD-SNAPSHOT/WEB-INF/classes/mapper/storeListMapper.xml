@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.healingcamp.app.dao.storeListMapper.">
+<!-- 현재 페이지 전체 갯수 카운트 -->
+    <select id="selectItemCount" parameterType="StorePageHandler" resultType="Integer">
+        select count(*)
+        from item
+        where true
+        <if test='cate != 0 '>
+            and I_cate = #{cate}
+        </if>
+        <if test="keyword != 'null' and option == 'N'">
+            and I_name like concat('%', #{keyword}, '%')
+        </if>
+        <if test="keyword != 'null' and option == 'B'">
+            and I_company like concat('%', #{keyword}, '%')
+        </if>
+        order by
+        <choose>
+            <when test='sort == null or sort == 0'> I_R_count </when>
+            <when test='sort == 1'> I_reg_Date DESC </when>
+            <when test='sort == 2'> ifnull(I_S_Price,I_O_price) </when>
+            <when test='sort == 3'> ifnull(I_S_Price,I_O_price) DESC </when>
+            <when test='sort == 4'> I_like_count DESC </when>
+        </choose>
+        , #{menu}
+        limit #{page}, #{recordSize}
+    </select>
+
+    <!-- 정보 셀렉트 해오기 -->
+    <select id="selectItemList" parameterType="StorePageHandler" resultType="ItemDto">
+        select T1.I_ID
+        ,T1.I_name
+        ,T1.I_company
+        ,T1.I_img_URL
+        ,T1.I_O_price
+        ,T1.I_S_Price
+        ,T1.I_reg_date
+        ,T1.I_count
+        ,T1.I_like_count
+        ,T1.I_R_count
+        ,T1.I_cate
+        ,T1.I_sell_cnt
+        , case when T2.U_num_fk Is not null then 2 else 1 end wishYn
+        FROM item T1 left outer join item_wishlist T2
+        on T2.I_ID_fk = T1.I_ID
+        and T2.U_num_fk = #{U_num}
+        where true
+            <if test='cate != 0 '>
+                and T1.I_cate = #{cate}
+            </if>
+            <if test="keyword != 'null' and option == 'N'">
+                and T1.I_name like concat('%', #{keyword}, '%')
+            </if>
+            <if test="keyword != 'null' and option == 'B'">
+                and T1.I_company like concat('%', #{keyword}, '%')
+            </if>
+        order by
+            <choose>
+                <when test='sort == null or sort == 0'> T1.I_R_count </when>
+                <when test='sort == 1'> T1.I_reg_Date DESC </when>
+                <when test='sort == 2'> ifnull(T1.I_S_Price, T1.I_O_price) </when>
+                <when test='sort == 3'> ifnull(T1.I_S_Price, T1.I_O_price) DESC </when>
+                <when test='sort == 4'> T1.I_like_count DESC </when>
+            </choose>
+        , #{menu}
+        limit #{page}, #{recordSize}
+    </select>
+
+</mapper>
