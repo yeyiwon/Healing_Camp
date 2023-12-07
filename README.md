@@ -1,4 +1,5 @@
-# Healing_Camp
+![header](https://capsule-render.vercel.app/api?type=slice&color=gradient&height=200&section=footer&text=HEALING%20CAMP&fontSize=100
+
 # ⛺HEALINGCAMP TEAM PROJECT😎
 
 ---
