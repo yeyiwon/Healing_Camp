@@ -93,9 +93,7 @@
 
 
         <div class="member">
-            <div id="idaf0e17f988c43" a='{"t":"s","v":"1.2","lang":"ko","locs":[295],"ssot":"c","sics":"ms","cbkg":"rgb(117,117,117)","cfnt":"rgb(255,255,255)","slpd":"7","slgp":"15","slbr":"8"}' style="height: 41px; background: transparent;">날씨 데이터 소스:
-                <a href="https://sharpweather.com/weather_south_korea/30_days/">sharpweather.com/weather_south_korea/30_days/</a>
-            </div>
+          <%-- 날씨 api 자리 --%>
 
             <div class="mb_menu login">
                 <a href="<c:url value='${ logInOutLink }' />" class="mb_menu_a">${ logInOutTxt }</a>
