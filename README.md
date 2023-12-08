@@ -77,7 +77,7 @@
 ---
 ![ERD.png](src%2Fmain%2Fwebapp%2Fresources%2Fimg%2FERD.png)
 
-# 🔎페이지 소개 #### 🔥 본인 파트
+# 🔎페이지 소개_본인 파트
 
 ---
 
