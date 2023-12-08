@@ -77,11 +77,10 @@
 ---
 ![ERD.png](src%2Fmain%2Fwebapp%2Fresources%2Fimg%2FERD.png)
 
-# 🔎페이지 소개 
+# 🔎페이지 소개 #### 🔥 본인 파트
 
 ---
 
-## 🔥 본인 파트
 ##  📌메인 페이지
   ![캠핑2.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%912.png)
   ![캠핑3.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%913.png)
