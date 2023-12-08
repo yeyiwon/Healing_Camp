@@ -92,7 +92,7 @@
   ![캠핑3.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%913.png)
   ![캠핑1.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%911.png)
   
-#### 시연 영상 
+#### 🎬시연 영상 
   ![1.gif](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F1.gif)
 
 ---
@@ -106,7 +106,7 @@
   ![캠핑12.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9112.png)
   ![캠핑6.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%916.png)  
 
-#### 시연 영상 
+#### 🎬시연 영상 
   ![3.gif](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F3.gif)
 
 ---
@@ -116,7 +116,7 @@
   ![캠핑14.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9114.png)
   ![캠핑18.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9118.png)
 
-#### - 시연 영상 
+#### - 🎬시연 영상 
   ![2.gif](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F2.gif)
  
 ---
