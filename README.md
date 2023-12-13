@@ -2,14 +2,14 @@
 
 # ⛺HEALINGCAMP TEAM PROJECT😎
 
-## 🧷목차 
+## 📑목차 
 
 - [개요](#프로젝트-목적)
   - [인원](#프로젝트-인원)
   - [기간](#프로젝트-기간)
-- [개발 환경 & 사용 기술](#-팀-개발-환경-및-사용-기술-)
+- [⚒️개발 환경 & 사용 기술](#-팀-개발-환경-및-사용-기술-)
 
-- [담당 역할🙌](#내가-맡은-파트)
+- [🙌담당 역할](#내가-맡은-파트)
 - [페이지 소개 및 시연 영상](#페이지-소개)
 
 # ⛺프로젝트 목적 
@@ -30,15 +30,14 @@
 
 - 2023-11-16 ~ 2023-11-29
 
-## 👏 팀 개발 환경 및 사용 기술 👏
+## ⚒️ 팀 개발 환경 및 사용 기술 ⚒️
 
----
-- 운영체제 : Windows
-- 개발 도구 : Visual Studio Code, Intellij
-- DB : Mysql, MONGODB (더미 데이터)
-- Server : Apache Tomcat 9.0.82
-- Lguage: HTML5, CSS3, JavaScript, JQuery, AJax, Java, JSTL, JSP
-- FrameWork: Spring, MyBatis
+🔹 운영체제 : Windows
+🔹 개발 도구 : Visual Studio Code, Intellij
+🔹 DB : Mysql, MONGODB (더미 데이터)
+🔹 Server : Apache Tomcat 9.0.82
+🔹 Lguage: HTML5, CSS3, JavaScript, JQuery, AJax, Java, JSTL, JSP
+🔹 FrameWork: Spring, MyBatis
 
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"><img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"><img src="https://img.shields.io/badge/Jquery-white?style=for-the-badge&logo=Jquery&logoColor=blue">
 <img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"><img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
@@ -69,18 +68,14 @@
 - 카카오 지도 API
 
     <br>
+    
     팀 프로젝트 소감 : 발표일 기준 시간상 부족으로 백을 많이 해보지 못하고 프론트를 더 많이하게 된 점이 아쉬움. 
-
----
 
 # ER-다이어그램
 
----
 ![ERD.png](src%2Fmain%2Fwebapp%2Fresources%2Fimg%2FERD.png)
 
 # 🔎페이지 소개_본인 파트
-
----
 
 ##  📌메인 페이지
   ![캠핑2.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%912.png)
