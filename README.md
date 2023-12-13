@@ -32,12 +32,12 @@
 
 ## ⚒️ 팀 개발 환경 및 사용 기술 ⚒️
 
-- 🔹 운영체제 : Windows
-- 🔹 개발 도구 : Visual Studio Code, Intellij
-- 🔹 DB : Mysql, MONGODB (더미 데이터)
-- 🔹 Server : Apache Tomcat 9.0.82
-- 🔹 Lguage: HTML5, CSS3, JavaScript, JQuery, AJax, Java, JSTL, JSP
-- 🔹 FrameWork: Spring, MyBatis
+- 운영체제 : Windows
+- 개발 도구 : Visual Studio Code, Intellij
+- DB : Mysql, MONGODB (더미 데이터)
+- Server : Apache Tomcat 9.0.82
+- Lguage: HTML5, CSS3, JavaScript, JQuery, AJax, Java, JSTL, JSP
+- FrameWork: Spring, MyBatis
 
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"><img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"><img src="https://img.shields.io/badge/Jquery-white?style=for-the-badge&logo=Jquery&logoColor=blue">
 <img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"><img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
@@ -45,9 +45,7 @@
 <img src="https://img.shields.io/badge/Visual_Studio_Code-white?style=for-the-badge&logo=visual%20studio%20code&logoColor=blue"><img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
 <img src="https://img.shields.io/badge/Github-black?style=for-the-badge&logo=github&logoColor=purple"><img src="https://img.shields.io/badge/Spring-green?style=for-the-badge&logo=Spring&logoColor=white">
 
-## 📝내가 맡은 파트
-
----
+# 📝내가 맡은 파트
 
 ### 📌BACK-END 
 - 캠핑장 데이터 베이스 설계 
