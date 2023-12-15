@@ -16,7 +16,7 @@
 ### ☁️ 평소에도 자주 이용하던 어딜 가야할 지 모를 떄 애용하던 어플이라 제가 한 번 만들어보고싶었습니다. 
 ### ☁️ 공부를 위한 목적
 
-#### 🩷 주색 및 의도하는 스타일
+# 🩷 주색 및 의도하는 스타일
   - #fff #333
   - 웹 페이지보단 주로 UI 느낌으로 진행하는 중 
   - 깔끔한 느낌 
@@ -28,9 +28,7 @@
   - 카카오톡 소셜 로그인
   - 핫플 추천 리스트 출력 (공공데이터 포털)
   - 마이로그 관리 
-  - 
-
-
+  - 전시회 일정 안내
 
 ### 🔎프로젝트 기간
 
@@ -51,75 +49,4 @@
 <img src="https://img.shields.io/badge/Visual_Studio_Code-white?style=for-the-badge&logo=visual%20studio%20code&logoColor=blue"><img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
 <img src="https://img.shields.io/badge/Github-black?style=for-the-badge&logo=github&logoColor=purple"><img src="https://img.shields.io/badge/Spring-green?style=for-the-badge&logo=Spring&logoColor=white">
 
-# 📝내가 맡은 파트
-
-### 📌BACK-END 
-- 캠핑장 데이터 베이스 설계
-- 캠핑장 데이터 자료 조사
-- 캠핑장 리스트 출력
-- 캠핑장 리스트 인기 순위 정렬
-- 캠핑장 디테일 페이지
-- 캠핑장 디테일 리뷰 불러오기
-
-### 📌FRONT-END 
-- 마이 페이지 
-- 메인 페이지 
-- 회원 가입 페이지
-- 로그인 페이지
-- 캠핑장 리스트 
-- 캠핑장 디테일 페이지
-- 예약 페이지 
-- 카카오 지도 API
-
-    <br>
-    
-    팀 프로젝트 소감 : 발표일 기준 시간상 부족으로 백을 많이 해보지 못하고 프론트를 더 많이하게 된 점이 아쉬움. 
-
-# 📝ER-다이어그램
-
-![ERD.png](src%2Fmain%2Fwebapp%2Fresources%2Fimg%2FERD.png)
-
-# 🔎페이지 소개_본인 파트
-
-##  📌메인 페이지
-  ![캠핑2.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%912.png)
-  ![캠핑3.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%913.png)
-  ![캠핑1.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%911.png)
-  
-#### 🎬시연 영상 
-  ![1.gif](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F1.gif)
-
----
-
-## 📌캠핑장 리스트
-![캠핑4.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%914.png)
-
-##  📌 캠핑장 디테일 
-  ![캠핑5.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%915.png)
-  ![캠핑11.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9111.png)
-  ![캠핑12.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9112.png)
-  ![캠핑6.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%916.png)  
-
-#### 🎬시연 영상 
-  ![3.gif](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F3.gif)
-
----
-## 📌 로그인 및 회원가입  
-  ![캐핑10.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%90%ED%95%9110.png)
-  ![캠핑13.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9113.png)
-  ![캠핑14.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9114.png)
-  ![캠핑18.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9118.png)
-
-#### - 🎬시연 영상 
-  ![2.gif](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F2.gif)
- 
----
-
-##  📌 마이 페이지
-  ![캠핑15.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9115.png)
-  ![캠핑16.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%9116.png)
-  ![캠핑8.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%918.png)
-  ![캠핑7.png](src%2Fmain%2Fwebapp%2Fresources%2F%EC%BA%A1%EC%B3%90%2F%EC%BA%A0%ED%95%917.png)
-
----
 
